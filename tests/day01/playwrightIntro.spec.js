@@ -1,7 +1,7 @@
 //const {test} = require("playwright/test");
 import {test} from "@playwright/test";
 
-test("", async ({page}) => {
+test("Simple google test", async ({page}) => {
     //navigate to the specific url, method returns promise, so we need to await it
     await
     page.goto("https://www.google.com/");
