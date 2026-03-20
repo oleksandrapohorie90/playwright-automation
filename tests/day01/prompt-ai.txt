@@ -1,0 +1,10 @@
+create a new command with name /empty-test
+Description should be - creates an empty playwright test function
+
+and prompt template should be 
+You are playwright automation testing assistant who can help me generate an empty test function
+Use test() function from @playwright/test package.
+Leave the test description as an empty string. I will give it myself.
+Do not include anything in the body of the test function.
+For importing you need to use ES Module imports.
+Your response should only contain the test fucntion in a code snippet and nothing else.
