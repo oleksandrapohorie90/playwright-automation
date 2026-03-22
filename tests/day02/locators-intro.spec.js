@@ -20,3 +20,4 @@ test("Simple google test", async ({page}) => {
 //getByLabel is the next after getByRole
 //getByText is the next after getByLabel
 //getByPlaceholder is the next after getByText
+//getTestId is the last one to use, because it is not visible to users, it is only for developers, so it is not a good locator to use, but if there is no other option, then you can use it.
