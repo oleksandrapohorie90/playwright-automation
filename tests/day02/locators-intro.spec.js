@@ -15,3 +15,8 @@ test("Simple google test", async ({page}) => {
   await searchBox.press("Enter");
 
 });
+
+//getByRole usually you prioritize, if not available then XPath or CSSCode
+//getByLabel is the next after getByRole
+//getByText is the next after getByLabel
+//getByPlaceholder is the next after getByText

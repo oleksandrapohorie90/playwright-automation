@@ -2,10 +2,13 @@
   "name": "playwright-automation",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "tests": "npx playwright test",
-    "test:specific": "npx playwright test --grep playwrightIntro.spec.js",
-    "test:tag": "npx playwright test --grep @test1",
+ "scripts": {
+    "tests-headless": "npx playwright test",
+    "tests-headed": "npx playwright test --headed",
+    "test-file-headless": "npx playwright test --grep file-name.spec.js",
+    "test-file-headed": "npx playwright test --headed --grep file-name.spec.js",
+    "test-tag-headless": "npx playwright test --grep @sep",
+    "test-tag-headed": "npx playwright test --headed --grep @sep",
     "report": "npx playwright show-report"
   },
   "keywords": [],
