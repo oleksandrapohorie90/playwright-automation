@@ -27,27 +27,28 @@ export default defineConfig({
     //screenshot: 'on' //will take screenshot for every test, even if it is passed, so it will take a lot of space, so it is not recommended to use it, but if you want to use it, you can use it.
     video: "on-first-retry",
     // video: {mode: 'retain-on-failure', size: {width: 1920, height: 1080}}
+    ignoreHTTPSErrors: true,
   },
 
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: "Google Chrome",
-    //   use: {
-    //     ...devices["Desktop Chrome"],
-    //     channel: "chrome",
-    //     viewport: { width: 1900, height: 1080 },
-    //   },
-    // },
-
     {
-      name: "Microsoft Edge",
+      name: "Google Chrome",
       use: {
-        ...devices["Desktop Edge"],
-        channel: "msedge",
+        ...devices["Desktop Chrome"],
+        channel: "chrome",
         viewport: { width: 1900, height: 1080 },
       },
     },
+
+    // {
+    //   name: "Microsoft Edge",
+    //   use: {
+    //     ...devices["Desktop Edge"],
+    //     channel: "msedge",
+    //     viewport: { width: 1900, height: 1080 },
+    //   },
+    // },
 
     /* 
   {
