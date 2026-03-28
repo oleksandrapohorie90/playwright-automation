@@ -1,5 +1,9 @@
 import {test} from "@playwright/test";
-
+/**
+ * event listeners special methods for switch windows but do not give await at the beginning even though returns promis
+ * it will be resolved when you await it later in the code, if you give await at the beginning it will wait for the pop-up to appear and then it will return the new page object of the pop-up but if you do not give await at the beginning it will not wait for the pop-up to appear and it will return a promise that will be resolved when you await it later in the code
+ * if you have multiple pop-ups you can create multiple event listeners for each pop-up and then await them later in the code
+ */
 test('Window pop-up practice', async ({page}) => {
    let promisedNewPage = page.waitForEvent("popup"); //waits for the pop-up to appear, created event listener for pop-up
     //playwright has auto switching
