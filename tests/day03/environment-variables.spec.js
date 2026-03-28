@@ -3,7 +3,7 @@ test("", async ({
     page,
   }) => {
     //TO SET UP ENV VARIABLES GO TO SEARCH FIELD >user settings and select JSON
-  
+    //File
     console.log("Username: " + process.env.PRACTICE_USERNAME);
     console.log("Password: " + process.env.PRACTICE_PASSWORD);
 });
