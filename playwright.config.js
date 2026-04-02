@@ -32,14 +32,14 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: "Google Chrome",
-      use: {
-        ...devices["Desktop Chrome"],
-        channel: "chrome",
-        viewport: { width: 1900, height: 1080 },
-      },
-    },
+    // {
+    //   name: "Google Chrome",
+    //   use: {
+    //     ...devices["Desktop Chrome"],
+    //     channel: "chrome",
+    //     viewport: { width: 1900, height: 1080 },
+    //   },
+    // },
 
     // {
     //   name: "Microsoft Edge",
@@ -50,15 +50,14 @@ export default defineConfig({
     //   },
     // },
 
-    /* 
-  {
-      name: 'chromium',
-      use: { 
-        ...devices['Desktop Chrome'],
-        viewport: {width: 1900, height: 1080} 
-       },
+    {
+      name: "chromium",
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1900, height: 1080 },
+      },
     },
-
+    /* 
     {
       name: 'firefox',
       use: { 
