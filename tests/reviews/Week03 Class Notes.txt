@@ -1,0 +1,24 @@
+Week03
+
+Topics:
+    Playwright Review
+    dotenv & JS faker
+    SEP User Stories (14 User stories)
+    Gherkin: Scenario, Feature, Background, When, Given, And, Then.
+   
+    Extra Perplexity Spaces
+
+Next Week:
+    Module04: Jenkins (3 hours)
+    Live CLass: Jenkins, GitHub Actions
+
+Next Next Week:
+    Module05: Famework Utilization (BDD). ====> 1 user story
+    Live Class: BDD (2 user stories), TDD
+
+Next Next Next Week:
+    Module06: TypeScript. 
+    Live Class: TypeScript Version of BDD & TDD Frameworks.
+
+        Template Playwright AUtomation Framework
+

@@ -1,8 +1,9 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
-// import * as dotenv from 'dotenv';
-// dotenv.config();
-import "dotenv/config";
+
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -27,32 +28,12 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "retain-on-first-failure",
     screenshot: "on-first-failure",
-    //screenshot: 'on' //will take screenshot for every test, even if it is passed, so it will take a lot of space, so it is not recommended to use it, but if you want to use it, you can use it.
-    video: "on-first-retry",
+    //video: 'on-first-retry'
     // video: {mode: 'retain-on-failure', size: {width: 1920, height: 1080}}
-    ignoreHTTPSErrors: true,
   },
 
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: "Google Chrome",
-    //   use: {
-    //     ...devices["Desktop Chrome"],
-    //     channel: "chrome",
-    //     viewport: { width: 1900, height: 1080 },
-    //   },
-    // },
-
-    // {
-    //   name: "Microsoft Edge",
-    //   use: {
-    //     ...devices["Desktop Edge"],
-    //     channel: "msedge",
-    //     viewport: { width: 1900, height: 1080 },
-    //   },
-    // },
-
     {
       name: "chromium",
       use: {
@@ -60,7 +41,16 @@ export default defineConfig({
         viewport: { width: 1900, height: 1080 },
       },
     },
+
     /* 
+  {
+      name: 'chromium',
+      use: { 
+        ...devices['Desktop Chrome'],
+        viewport: {width: 1900, height: 1080} 
+       },
+    },
+
     {
       name: 'firefox',
       use: { 
@@ -76,6 +66,25 @@ export default defineConfig({
         viewport: {width: 1850, height: 1000}  
       },
     },
+
+    {
+      name: 'Google Chrome',
+      use: { 
+        ...devices['Desktop Chrome'],
+        channel: 'chrome',
+        viewport: {width: 1900, height: 1080} 
+       },
+    },
+
+     {
+      name: 'Microsoft Edge',
+      use: { 
+        ...devices['Desktop Edge'],
+        channel: 'msedge',
+        viewport: {width: 1900, height: 1080} 
+      },
+    }
+    
 */
 
     /* Test against mobile viewports. */
