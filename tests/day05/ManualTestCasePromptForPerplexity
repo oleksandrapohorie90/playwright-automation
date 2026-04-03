@@ -1,0 +1,20 @@
+Test Case: Verify that all the links under the ul tag are displayed and enabled
+step 1: Open chrome browser
+step 2: Navigate to "https://the-internet-5chk.onrender.com/"
+step 3: The url should contain "onrender.com"
+step 4: The title should be "Practice"
+step 5: All the links under the ul HTML tag are visible and clickable
+
+Here is the xpath locator for locating the links elements that are under the ul tag:
+//ul[@class='list-group']/li/a
+
+--------------------------
+Test Case: Search CYDEO on google
+step 1: Open chrome browser
+step 2: Navigate to "https://www.google.com/"
+step 3: The title should be "Google"
+step 4: Enter "CYDEO" in the searchbox and press enter key
+step 5: Page title contains "CYDEO"
+
+Here is the xpath locator for locating the search box on google page:
+//textarea[@class='gLFyf']
