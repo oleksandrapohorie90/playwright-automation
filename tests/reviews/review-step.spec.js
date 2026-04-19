@@ -27,11 +27,11 @@ test.describe("Review Step", () => {
     );
     await expect(step2StepperCircle).toHaveCSS(
       "background-color",
-      "rgb(172, 245, 138)",//green
+      "rgb(172, 245, 138)",
     );
     await expect(step3StepperCircle).toHaveCSS(
       "background-color",
-      "rgb(1, 201, 255)",//blue
+      "rgb(1, 201, 255)",
     );
   });
 

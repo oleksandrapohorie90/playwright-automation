@@ -90,6 +90,3 @@ export class CommonUI {
     await zipCodeInput.fill(zipCode);
   }
 }
-/**
- * can do MFA configuration in the future, but for now we will use basic auth to bypass MFA, because it is not the focus of our tests and it will save us a lot of time and effort. We can also use this approach to bypass MFA for other applications that we need to test in the future. It is a common practice to use basic auth to bypass MFA in automated tests, because it allows us to focus on testing the functionality of the application without worrying about the authentication process.
- */
