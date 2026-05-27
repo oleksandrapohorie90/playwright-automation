@@ -1,0 +1,2 @@
+Option+Shift+F - mac
+Alt+Shift+F - windows

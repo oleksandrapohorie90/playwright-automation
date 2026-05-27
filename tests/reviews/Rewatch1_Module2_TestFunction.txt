@@ -1,7 +1,7 @@
 The test() fucntion is the core building block of playwright tests;
 It takes two arguments: a string description and an async callback fucntion 
         description: describes what the test is checkingl
-        async callback function: takes fixtures and contains the codes of the test
+        async callback function: takes fixtures and contains the codes/scripts of the test
 Each test function runs in isolation, Playwright creates a new browser context for each test
 
 import {test} from '@playwright/test';
@@ -35,6 +35,7 @@ but it is more modern and it is recommended to use it in new projects, it is als
 import
 {test} - what I would like to import
 from "@aplywright/test" - where I would like to import that member from ? which library
+
 =====================
 NamingConvensions
 For folder names: lowercase
