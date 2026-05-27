@@ -1,0 +1,27 @@
+The test() fucntion is the core building block of playwright tests;
+It takes two arguments: a string description and an async callback fucntion 
+        description: describes what the test is checkingl
+        async callback function: takes fixtures and contains the codes of the test
+Each test function runs in isolation, Playwright creates a new browser context for each test
+
+import {test} from '@playwright/test';
+test('test name', async ({ fixtureName }) => {
+
+    //Test Codes
+});
+
+//fixture -> page is equivalent to driver variable in Selenium, will be able to control a tab in the web browser; 
+mouse actions etc there are methods available in this fixture; its automatically created and destroyed; no need to tearDown steps;
+lots of assertions, validations
+test('My Automation test', async ({ page }) => {
+
+    //Test Codes
+});
+=====================
+NamingConvensions
+For folder names: lowercase
+For test files: lowerCamelCase or Kebab-case
+        lowerCamelCase: loginTest.spec.js, loginTest.test.js
+        Kebab-case: login-test.spec.js, login-test.test.js
+For page object files: UpperCamelCase
+        UpperCamelCase: LoginPage.js
