@@ -17,6 +17,24 @@ test('My Automation test', async ({ page }) => {
 
     //Test Codes
 });
+Remember most of the methods return promise, so we need to await them, give sometime for promise to be resolved;
+If not we can just return them - also thats why we have sync
+test("Simple google test", async ({page}) => {
+    //navigate to the specific url, method returns promise, so we need to await it
+    await
+    page.goto("https://www.google.com/");
+    //if return time returns promise we need to await it, if not we can just return it
+await page.waitForTimeout(3000);
+});
+
+=====================
+import {test} from "@playwright/test"; //new way to import test from playwright, 
+it is the same as the old way, 
+but it is more modern and it is recommended to use it in new projects, it is also more compatible with modern JavaScript features like ES modules and async/await, so we can use it without any issues in our tests.
+
+import
+{test} - what I would like to import
+from "@aplywright/test" - where I would like to import that member from ? which library
 =====================
 NamingConvensions
 For folder names: lowercase
