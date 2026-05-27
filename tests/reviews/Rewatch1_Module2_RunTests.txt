@@ -1,0 +1,40 @@
+1. To run tests you can install Playwright extension - Playwright test for VSCode - latest is not good(for some reason doesnt follow global configuration of playwright),
+bc it has own configuration, it also doesnt close the browser when run tests, so instead install v.1.0.22 and restart extension
+if not run button in tests then refresh/reload button in testing window; 
+to have an arrow in tests and run directly
+when running tests with  v.1.0.22 it closes browser and in tests window shows all tests - not the best parctise, bc might not have
+permissions to have this extension
+
+OR 
+run in terminal with below command
+npx playwright test 
+
+after this
+npx playwright show-report
+to review report
+
+OR
+run in json file under "scripts":{} we added "tests": "npx playwright test", the extension that we added
+NPM Run allows us to run from json commands that we have in scripts "npx playwright test" 
+so >Run in json file under scripts is equivalent to running in terminal "npx playwright test" - just runs all the tests I have
+
+But what if you want to execute specific test file, we can add under scripts{}
+"test:specific": "npx playwright test --grep nameOfFile" <--nameOfFile can be example.spec.json
+It will run whichever file I have there; and if I click >Run above it it will only run tests in that file
+
+ALSO we can create another script to run by tagName
+"test:specific": "npx playwright test --grep nameOfFile",
+"test:tag": "npx playwright test --grep @test1" <--run tests with specific tagNames
+
+so run all the tests:
+"scripts": {
+    "tests-headless": "npx playwright test",
+    "tests-headed": "npx playwright test --headed",
+    "test-file-headless": "npx playwright test --grep file-name.spec.js",
+    "test-file-headed": "npx playwright test --headed --grep file-name.spec.js",
+    "test-tag-headless": "npx playwright test --grep @wip",
+    "test-tag-headed": "npx playwright test --headed --grep @sep01",
+    "report": "npx playwright show-report"
+  },
+
+  After running tests you will have playwright report -   "report": "npx playwright show-report"
