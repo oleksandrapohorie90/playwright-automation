@@ -1,0 +1,39 @@
+goto(url) - navigate to browser to specified URL; returns Promise need ot give await
+
+title() - returns title of current page as str
+
+url() - returns current url of current page as str; doesnt return promise - no need to give await
+
+setViewSize({w,l}) - sets the size of the browser viewport to spefified width and height values
+
+page.locator(selector) - crete a locator for given selector, 
+which can be used to perform actions like click, type; locator object itself has lots of methods
+**NOTE you can always give await but it will give a message that await word has no affect;
+
+
+for page.locator(selector) we can use:
+        CSS selector: page.locator('button.primary')
+        XPath selector: page.locator('//button[contains(text(),"Submit")]')
+        Text content: page.locator('text=Submit')
+        TestID: page.locator('data-testid=submit-button')
+
+Once you located an element, you got locator object then you can use:
+    Actions:
+        click()
+        fill()
+        type()
+        press()
+        check()
+        uncheck()
+        selectOPtion()
+    Retrieval:
+        textContent()
+        innerText()
+        inputValue()
+        getAttribute()
+    State:
+        isVisible()
+        isEnabled()
+        isChecked()
+        isDisabled()
+
