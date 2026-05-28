@@ -9,6 +9,7 @@ setViewSize({w,l}) - sets the size of the browser viewport to spefified width an
 page.locator(selector) - crete a locator for given selector, 
 which can be used to perform actions like click, type; locator object itself has lots of methods
 **NOTE you can always give await but it will give a message that await word has no affect;
+has auto waiting functionality;
 
 
 for page.locator(selector) we can use:
@@ -20,9 +21,9 @@ for page.locator(selector) we can use:
 Once you located an element, you got locator object then you can use:
     Actions:
         click()
-        fill()
-        type()
-        press()
+        fill() -> all chars at once
+        type() -> chars one by one
+        press() -> press Enter, CTRL any special keys; searchBox.press("Enter");
         check()
         uncheck()
         selectOPtion()

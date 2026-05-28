@@ -29,3 +29,15 @@ test("Set the window size", async ({ page }) => {
 
 
 //================================
+test("Simple google test", async ({ page }) => {
+
+    await page.goto("https://www.google.com/");
+
+    await page.waitForTimeout(3000);
+
+    let searchBox =  page.locator("//textarea[@class='gLFyf']");
+
+    await searchBox.fill("CYDEO");
+
+    await searchBox.press("Enter");
+});
