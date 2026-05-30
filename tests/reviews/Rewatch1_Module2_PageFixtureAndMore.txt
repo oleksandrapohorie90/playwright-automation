@@ -38,3 +38,17 @@ Once you located an element, you got locator object then you can use:
         isChecked()
         isDisabled()
 
+==============================
+Test Groups - to create we need to use test.describe(), which allows to organize related tests together; improves readability
+and maintanability of out test suite; test groups can be nested for further organization
+Test groups can have their own hooks that apply to all tests within the group; hooks can help to reduce duplication and provide 
+teardown or setup
+
+    -beforeEach() - runs bf each tc in the test group
+    -afterEach() - runs after each ts in the test group
+    -beforeAll() - runs once bf all tcs in test group
+    -afterAll() - runs once after all tcs in test group
+
+    test.beforeAll()
+    for each test -> test.beforeEach() then test code and then test.afterEach()
+    test.afterAll()
