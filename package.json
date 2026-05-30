@@ -7,7 +7,7 @@
     "tests-headless": "npx playwright test",
     "tests-headed": "npx playwright test --headed",
     "test-file-headless": "npx playwright test --grep file-name.spec.js",
-    "test-file-headed": "npx playwright test --headed --grep page-object-methods2.spec.js",
+    "test-file-headed": "npx playwright test --headed --grep locator-object-methods3.spec.js",
     "test-tag-headless": "npx playwright test --grep @wip",
     "test-tag-headed": "npx playwright test --headed --grep @sep01",
     "report": "npx playwright show-report"

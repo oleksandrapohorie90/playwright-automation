@@ -1,13 +1,14 @@
 Common methods of locator obj:
 
     Actions:
-    click()
+    click() - 
     fill()
     type()
     press()
-    check()
+    check() - handling checkBoxes, verify that checkbox is not checked bf it clicks it, will only click if not checked
     uncheck()
-    selectOption()
+    selectOption() - used for dropdowns that has select tagName, equivalent to selenium Select class
+Select by class by value, index, visibleText - same for playwright select by value, text, index
 
     Retrieval:
     textContent()
