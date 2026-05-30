@@ -1,0 +1,22 @@
+Common methods of locator obj:
+
+    Actions:
+    click()
+    fill()
+    type()
+    press()
+    check()
+    uncheck()
+    selectOption()
+
+    Retrieval:
+    textContent()
+    innerText()
+    inputValue()
+    getAttribute()
+
+    State:
+    isVisible()
+    isEnabled()
+    isChecked()
+    isDisabled()
