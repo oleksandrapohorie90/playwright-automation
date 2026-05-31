@@ -10,11 +10,12 @@ Common methods of locator obj:
     selectOption() - used for dropdowns that has select tagName, equivalent to selenium Select class
 Select by class by value, index, visibleText - same for playwright select by value, text, index
 
-    Retrieval:
-    textContent()
-    innerText()
-    inputValue()
-    getAttribute()
+    Retrieval:used to get text value of the webelement
+    textContent() - returns visible and invisible text
+    innerText() - whatever visible text of that element is
+    inputValue() - special method only works with html that has a tag name input,textArea, select;
+    will return the value within that input box or dropdown box
+    getAttribute() - if you want to get a value of a specific attribute of that webelement 
 
     State:
     isVisible()
