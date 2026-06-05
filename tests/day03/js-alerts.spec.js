@@ -14,7 +14,7 @@ test.describe("Test Group", () => {
     page.on("dialog", async (alert) => {
       console.log(`Alert Message: ${alert.message()}`);
       await page.waitForTimeout(3000);
-      await alert.accept();
+      await alert.accept(); 
     });
 
     let clickForJSAlertButton = page.locator("//button[@onclick='jsAlert()']");
@@ -43,7 +43,7 @@ test.describe("Test Group", () => {
     });
 
     let clickForJSPromptAlertButton = page.locator(
-      "//button[@onclick='jsPrompt()']"
+      "//button[@onclick='jsPrompt()']",
     );
     await clickForJSPromptAlertButton.click();
     await page.waitForTimeout(3000); //ususally you dont add pausings so delete in real tests
