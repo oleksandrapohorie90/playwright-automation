@@ -1,0 +1,21 @@
+Iframe - allows to display content from a different source or domain;
+Iframe isolate content from main page, they have their own context;
+Stripe for example for payments;
+
+In Selenium we switch to Iframe
+In Playwright we switch automatically, just locate an iframe;
+
+After locating Iframe, then you can interact with all elements; Anything outside iframe belongs to same HTML code
+
+Text editor from a different source;
+
+================
+Mouse Actions - page ficture is used itself
+page.click()
+page.dblclick()
+page.hover()
+page.dragAdnDrop(sourse, target)
+page.mouse.wheel(deltaX,deltaY) - 
+page.click(selector, {button:'right'})
+
+
