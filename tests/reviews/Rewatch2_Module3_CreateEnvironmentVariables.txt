@@ -1,0 +1,33 @@
+1. go to settings Selection
+2. search for "> user setting" folder
+3. select "Open User Settings (JSON)" select JSON
+4. allows to acces settings of Visual Code, in the json file I can declare environment variables
+5. "env_var_name": smth,
+
+works for playwright extensions:
+
+"playwright.env": {
+//all upper case
+    "PRACTICE_USERNAME" : "admin",
+    "PRACTICE_PASSWORD" : "admin"
+
+}
+If I run above from extension(test itself) it will run but it wont work if I run from package.json file - will error out with undefined 
+Its only set for playwright extension, when terminal is involved it cant read those env variables
+
+6. Configure env variables for the terminal:
+in settings.json after 
+"playwright.env": {
+//all upper case
+    "PRACTICE_USERNAME" : "admin",
+    "PRACTICE_PASSWORD" : "admin"
+
+},
+add
+works for terminal, integrated env:
+
+//select operating system when typed below
+"terminal.integrated.env.osx": {
+     "PRACTICE_USERNAME" : "admin",
+    "PRACTICE_PASSWORD" : "admin" 
+}
