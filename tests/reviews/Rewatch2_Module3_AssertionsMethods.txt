@@ -1,0 +1,9 @@
+Assertion Methods - with values(exact value) > expect(value).toBe(expected)
+                  - with locator/page > expect(locator/page).toBeVisible() , .toBeHidden() etc;
+We will be using .expect method, once we export it - it will determine which method we will use
+
+e.g. > expect(value).toBeTruthy() - any method after expect(). returns exact result
+but when you pass locator or page instance into expect(locator/page).toBeVisible() - any method after expect().
+returns Promise, so you need to add "await" keyword
+
+
