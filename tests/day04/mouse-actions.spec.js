@@ -41,8 +41,10 @@ test.describe("Mouse Actions Test Group", () => {
   });
 
   test("Scrolling to specific element", async ({ page }) => {
-    await inputsLink.scrollIntoViewIfNeeded(); //scrolls to the element if it is not in view
+    //playwright has auto clicking and scrolling but if you want to scroll to specific element
+    //you can use scrollIntoViewIfNeeded() method
     let inputsLink = page.getByText("Inputs");
+    await inputsLink.scrollIntoViewIfNeeded(); //scrolls to the element if it is not in view
     await page.waitForTimeout(3000);
     await inputsLink.click(); //scrolling is done automatically so it will still click
   });
@@ -52,8 +54,8 @@ test.describe("Mouse Actions Test Group", () => {
     await page.waitForTimeout(3000);
     await page.dragAndDrop("//div[@id='column-a']", "//div[@id='column-b']"); //drags the element with id "column-a" and drops it on the element with id "column-b"
     //second approach
-    let sourceElement = page.locator("//div[@id='column-a']");
-    let targetElement = page.locator("//div[@id='column-b']");
-    await sourceElement.dragTo(targetElement);
+    let squareA = page.locator("//div[@id='column-a']");
+    let squareB = page.locator("//div[@id='column-b']");
+    await squareA.dragTo(squareB); //drags the element with id "column-a" and drops it on the element with id "column-b"
   });
 });

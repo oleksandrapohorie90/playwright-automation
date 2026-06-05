@@ -18,4 +18,16 @@ page.dragAdnDrop(sourse, target)
 page.mouse.wheel(deltaX,deltaY) - 
 page.click(selector, {button:'right'})
 
+================
+WebTables - html elements for displaying data in rows and columns
+HTML Table Structure
 
+Extracting Data from Tables
+Table tag - <table>
+Header - <thead>, <th>
+Body - <tbody>, <tr>, <td>
+Footer - <tfoot>
+
+to get all rows > table.locator('tr');
+all cells > row.locator('td');
+extract text > cell.textContent();
