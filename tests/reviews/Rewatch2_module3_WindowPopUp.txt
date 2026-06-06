@@ -1,0 +1,26 @@
+Window Pop up
+capture new page instance - page fixture refers to the first tab, 
+if going to create a new tab then need to createan event listener
+then capture that page after event captures that page
+
+test("Window pop-up practice", async ({ page }) => {
+  //1. create an event listener for the pop-up < specify which event listener
+  //2. NO await keyword is needed
+  let promisedNewPage = page.waitForEvent("popup"); //waits for the pop-up to appear, created event listener for pop-up
+  //playwright has auto switching
+  //but to see manually
+  await page.bringToFront(); //brings the original page to the front;
+  await page.goto("https://the-internet-5chk.onrender.com/windows");
+  await page.click("text='Click Here'"); //action that helps to trigger a new window/tab
+
+  await page.waitForTimeout(6000);
+  //await for the promise to be resolved, I will get a new page instance- new tab that opens
+  let newPage = await promisedNewPage; 
+
+  Then I will have 2 page instances > 1st refers to the 1st tab - page
+  and the new page refers to the 2nd tab - newPage
+  if you want to automate the 1st tab - use page
+  if you want to automate the 2nd tab - use newPage
+
+  To get elements from 1st tab I call > page.getByText()
+  To get elements form 2nd tab I call > newPage.getText()
