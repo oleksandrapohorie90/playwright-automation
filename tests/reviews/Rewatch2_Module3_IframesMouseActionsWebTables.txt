@@ -31,3 +31,9 @@ Footer - <tfoot>
 to get all rows > table.locator('tr');
 all cells > row.locator('td');
 extract text > cell.textContent();
+
+================
+window pop ups - when clicked a new page(tab) opens up
+we need to create an EVENT LISTENER, to handle those types of events
+at the beginning of test we can create an event listener we monitor for certain activity
+once occurs we can create page instance from that event listener
